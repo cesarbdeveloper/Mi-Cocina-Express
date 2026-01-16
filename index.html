@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cocina Express</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Cocina Express</h1>
+        <button id="ver-carrito">🛒 Carrito (<span id="contador-carrito">0</span>)</button>
+    </header>
+
+    <main id="productos-container">
+        <div class="producto" data-id="1" data-nombre="Sartenes Antiadherentes" data-precio="25.99">
+            <img src="./views/image/Sartenes Antiadherentes.jpg" alt="Sartenes Antiadherentes" width="200">
+            <h3>Sartenes Antiadherentes</h3>
+            <p>$25.99</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="2" data-nombre="Set de Cuchillos" data-precio="36.20">
+            <img src="./views/image/Set de Cuchillos.jpg" alt="Set de Cuchillos" width="200">
+            <h3>Set de Cuchillos</h3>
+            <p>$36.20</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="3" data-nombre="Ollas" data-precio="29.99">
+            <img src="./views/image/Ollas.jpg" alt="Ollas" width="200">
+            <h3>Ollas</h3>
+            <p>$29.99</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="4" data-nombre="Olla Grande" data-precio="45.50">
+            <img src="./views/image/Olla Grande.jpg" alt="Olla Grande" width="200">
+            <h3>Olla Grande</h3>
+            <p>$45.50</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="5" data-nombre="Cafetera" data-precio="30.00">
+            <img src="./views/image/Cafetera.jpg" alt="Cafetera" width="200">
+            <h3>Cafetera</h3>
+            <p>$30.00</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="6" data-nombre="Batidores De Mano" data-precio="20.17">
+            <img src="./views/image/Batidores De Mano.jpg" alt="Batidores De Mano" width="200">
+            <h3>Batidores De Mano</h3>
+            <p>$20.17</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="7" data-nombre="Batidor Automático" data-precio="50.00">
+            <img src="./views/image/Batidor Automático.jpg" alt="Batidor Automático" width="200">
+            <h3>Batidor Automático</h3>
+            <p>$50.00</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="8" data-nombre="Cucharones" data-precio="40.00">
+            <img src="./views/image/Cucharones.jpg" alt="Cucharones" width="200">
+            <h3>Cucharones</h3>
+            <p>$40.00</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="9" data-nombre="Espátulas" data-precio="15.25">
+            <img src="./views/image/Espátulas.jpg" alt="Cucharones" width="200">
+            <h3>Espátulas</h3>
+            <p>$15.25</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="10" data-nombre="Ralladores De Queso" data-precio="30.00">
+            <img src="./views/image/Ralladores De Queso.jpg" alt="Ralladores De Queso" width="200">
+            <h3>Ralladores De Queso</h3>
+            <p>$30.00</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="11" data-nombre="Martillos Para Ablandar Carne" data-precio="25.30">
+            <img src="./views/image/Martillos Para Ablandar Carne.png" alt="Martillos Para Ablandar Carne" width="200">
+            <h3>Martillos Para Ablandar Carne</h3>
+            <p>$25.30</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" data-id="12" data-nombre="Exprimidor De Jugo" data-precio="15.00">
+            <img src="./views/image/Exprimidor De Jugo.jpg" alt="Exprimidor De Jugo" width="200">
+            <h3>Exprimidor De Jugo</h3>
+            <p>$15.00</p>
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        </main>
+
+    <div id="carrito-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>🛒 Tu Carrito</h2>
+            <ul id="lista-carrito">
+                </ul>
+            <p>Total: $<span id="total-carrito">0.00</span></p>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Página Desarrrollada por:
+            <a href="https://github.com/cesarbdeveloper" target="_blank">César Barazarte</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { MONGO_URI } = require('./config');
+//cconst { MONGO_URI } = require('./config');
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -7,15 +7,15 @@ const path = require('path');
 const cors = require('cors');
 const cookiesParser = require('cookie-parser');
 const morgan = require('morgan');
-const usersRouter = require('./controllers/users');
-const { userExtractor } = require('./middleware/auth.js');
-const loginRouter = require('./controllers/login.js');
-const logoutRouter = require('./controllers/logout.js');
-const todosRouter = require('./controllers/todos.js');
+// const usersRouter = require('./controllers/users');
+// const { userExtractor } = require('./middleware/auth.js');
+// const loginRouter = require('./controllers/login.js');
+// const logoutRouter = require('./controllers/logout.js');
+// const todosRouter = require('./controllers/todos.js');
 
 (async() => {
     try {
-        await mongoose.connect(MONGO_URI);
+        await mongoose.connect("mongodb+srv://cesardev123:csardev579@cluster0.ihmrdsj.mongodb.net/?appName=Cluster0");
         console.log('Conectado a Mongo DB');
     
     } catch (error) {
@@ -41,10 +41,10 @@ app.use('/verify/:id/:token', express.static(path.resolve('views', 'verify')));
 app.use(morgan('tiny'));
 
 //Rutas Backend
-app.use('/api/users', usersRouter);
-app.use('/api/login', loginRouter);
-app.use('/api/logout', logoutRouter);
-app.use('/api/todos',userExtractor, todosRouter);
+// app.use('/api/users', usersRouter);
+// app.use('/api/login', loginRouter);
+// app.use('/api/logout', logoutRouter);
+// app.use('/api/todos',userExtractor, todosRouter);
 
 
 module.exports = app;

@@ -7,5 +7,3 @@ const server = http.createServer(app);
 server.listen(3002, () => {
     console.log('El servidor esta corriendo');
 })
-
-()()
